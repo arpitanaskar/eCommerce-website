@@ -1,0 +1,25 @@
+.card-body-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.item-list {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 12rem;
+}
+.card {
+  width: 17rem;
+  margin: 2rem 2rem;
+}
+.cart-button {
+  display: flex;
+  justify-content: center;
+}
+.cart-button button {
+  color: #56ccf2;
+}
+.cart-button button:hover {
+  color: #56ccf2;
+}

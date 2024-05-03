@@ -1,0 +1,11 @@
+.modal-overlay {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  width: 9cm;
+  min-height: 12cm;
+  max-height: 100%;
+  z-index: 1000; /* Ensure the modal overlay appears above other content */
+  display: flex;
+  justify-content: center;
+}
