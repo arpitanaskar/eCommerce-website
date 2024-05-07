@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import "./Header.css";
-import cartShow from "../context-manager/cartShow";
+import CartContext from "../context-manager/CartContext";
 
 const Header = (props) => {
-  const ctx = useContext(cartShow);
+  const ctx = useContext(CartContext);
 
   const cartButtonHandler = () => {
     ctx.openCart();

@@ -2,10 +2,11 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./Products.css";
 import { useContext } from "react";
-import cartShow from "../context-manager/cartShow";
+
+import CartContext from "../context-manager/CartContext";
 
 const Products = () => {
-  const ctx = useContext(cartShow);
+  const ctx = useContext(CartContext);
   const productsArr = [
     {
       title: "Colors",

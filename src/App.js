@@ -2,12 +2,12 @@ import { useContext } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import cartShow from "./components/context-manager/cartShow";
+import cartContext from "./components/context-manager/CartContext";
 import Cart from "./components/Header/Cart/Cart";
 import Products from "./components/Products/Products";
 
 let App = () => {
-  const ctx = useContext(cartShow);
+  const ctx = useContext(cartContext);
   return (
     <div className="eCommerceWebsite">
       <Header />

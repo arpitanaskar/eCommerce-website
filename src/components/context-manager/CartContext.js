@@ -1,9 +1,10 @@
 import React from "react";
 
-const cartShow = React.createContext({
+const CartContext = React.createContext({
+  items: [],
   showCart: false,
   closeCart: () => {},
   openCart: () => {},
 });
 
-export default cartShow;
+export default CartContext;

@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import Modal from "../../Modal/Modal";
 import "./Cart.css";
-import cartShow from "../../context-manager/cartShow";
+import CartContext from "../../context-manager/CartContext";
 import Button from "react-bootstrap/Button";
 
 const Cart = (props) => {
-  const ctx = useContext(cartShow);
+  const ctx = useContext(CartContext);
   return (
     <Modal>
       <div className="cart">
@@ -22,7 +22,28 @@ const Cart = (props) => {
           <span>PRICE</span>
           <span>QUANTITY</span>
         </div>
-        <div className="cart-items"></div>
+        <div className="cart-items">
+          <div className="cart-items-container">
+            {ctx.items.map((item) => (
+              <li>
+                <span className="cart-item-title">
+                  <img
+                    src={item.imageUrl}
+                    alt="album"
+                    height="80px"
+                    width="80px"
+                  />
+                  {item.title}
+                </span>
+                <span className="cart-item-price">{item.price}</span>
+                <span className="cart-item-quantity">
+                  <p>{item.quantity}</p>
+                  <Button variant="danger">Remove</Button>
+                </span>
+              </li>
+            ))}
+          </div>
+        </div>
         <div className="cart-total">Total </div>
         <Button className="purchase-button" variant="primary">
           PURCHASE

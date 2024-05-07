@@ -7,14 +7,14 @@ import App from "./App";
 
 import "../node_modules/react-bootstrap/dist/react-bootstrap.min.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import CartShowProvider from "./components/context-manager/CartShowProvider.js";
+import CartContextProvider from "./components/context-manager/CartContextProvider.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <CartShowProvider>
+    <CartContextProvider>
       <App />
-    </CartShowProvider>
+    </CartContextProvider>
   </React.StrictMode>
 );
 
