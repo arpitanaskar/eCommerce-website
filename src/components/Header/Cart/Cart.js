@@ -25,7 +25,7 @@ const Cart = (props) => {
         <div className="cart-items">
           <div className="cart-items-container">
             {ctx.items.map((item) => (
-              <li>
+              <li key={item.title}>
                 <span className="cart-item-title">
                   <img
                     src={item.imageUrl}

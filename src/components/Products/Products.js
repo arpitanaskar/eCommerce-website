@@ -41,12 +41,14 @@ const Products = () => {
     <div>
       <div className="item-list">
         {productsArr.map((item) => (
-          <Card className="card">
+          <Card key={item.title} className="card">
             <Card.Img variant="top" src={item.imageUrl} />
             <Card.Body className="card-body-flex">
               <span>{item.price}</span>
               <span>
-                <Button variant="primary">Purchase</Button>
+                <Button variant="primary" onClick={() => ctx.addToCart(item)}>
+                  Purchase
+                </Button>
               </span>
             </Card.Body>
           </Card>

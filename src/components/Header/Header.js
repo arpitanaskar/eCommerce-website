@@ -23,7 +23,7 @@ const Header = (props) => {
         </li>
         <a href="#cart" className="cart-holder" onClick={cartButtonHandler}>
           cart
-          <span className="cart-number">0</span>
+          <span className="cart-number">{ctx.totalQuantity}</span>
         </a>
       </ul>
 
