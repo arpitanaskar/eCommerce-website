@@ -1,21 +1,32 @@
-import { useContext } from "react";
-import "./App.css";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import cartContext from "./components/context-manager/CartContext";
-import Cart from "./components/Header/Cart/Cart";
-import Products from "./components/Products/Products";
+import About from "./components/Pages/About/About";
+import Products from "./components/Pages/Products/Products";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayOut from "./components/Pages/root";
+import Home from "./components/Pages/Home/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayOut />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/store",
+        element: <Products />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 let App = () => {
-  const ctx = useContext(cartContext);
-  return (
-    <div className="eCommerceWebsite">
-      <Header />
-      {ctx.showCart && <Cart />}
-      <Products />
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
